@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Major+Mono+Display");
 
 * {
-	font-family: Major Mono Display;
+	font-family: "Major Mono Display";
 }
 #container {
 	margin: 20px auto 20px auto;

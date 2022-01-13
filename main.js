@@ -550,28 +550,32 @@ var pauseAudio = new Audio("http://codeskulptor-demos.commondatastorage.googleap
 var loseAudio = new Audio("http://commondatastorage.googleapis.com/codeskulptor-demos/pyman_assets/theygotcha.ogg");
 
 // Instructions on startup
-ctx.font = "30px Major Mono Display";
-ctx.fillStyle = "black";
-ctx.textAlign = "center";
-ctx.fillText("controls:", mainCanvas.width / 2, mainCanvas.width / 2 - 1);
-ctx.fillText("_________", mainCanvas.width / 2, mainCanvas.width / 2 + 10);
-ctx.font = "20px Major Mono Display";
-ctx.textAlign = "center";
-ctx.fillText("a/←: left", mainCanvas.width / 2, mainCanvas.width / 2 + 45);
-ctx.fillText("d/→: right" , mainCanvas.width / 2, mainCanvas.width / 2 + 70);
-ctx.fillText("s/↓: down" , mainCanvas.width / 2, mainCanvas.width / 2 + 95);
-ctx.fillText("space: drop", mainCanvas.width / 2, mainCanvas.width / 2 + 120);
-ctx.fillText("q: rotate ↻", mainCanvas.width / 2, mainCanvas.width / 2 + 145);
-ctx.fillText("e: rotate ↺", mainCanvas.width / 2, mainCanvas.width / 2 + 170);
-ctx.fillText("r: hold", mainCanvas.width / 2, mainCanvas.width / 2 + 195);
-holderctx.font = "20px Major Mono Display";
-holderctx.fillStyle = "black";
-holderctx.textAlign = "center";
-holderctx.fillText("held", holderCanvas.width / 2, holderCanvas.height / 2 - 5);
-holderctx.fillText("block", holderCanvas.width / 2, holderCanvas.height / 2 + 20);
-queuectx.font = "20px Major Mono Display";
-queuectx.fillStyle = "black";
-queuectx.textAlign = "center";
-queuectx.fillText("queued", queueCanvas.width / 2, queueCanvas.height / 2 - 10);
-queuectx.fillText("blocks", queueCanvas.width / 2, queueCanvas.height / 2 + 15);
-document.getElementById("score").innerHTML = "score";
+function startUp() {
+  ctx.font = "30px Major Mono Display";
+  ctx.fillStyle = "black";
+  ctx.textAlign = "center";
+  ctx.fillText("controls:", mainCanvas.width / 2, mainCanvas.width / 2 - 1);
+  ctx.fillText("_________", mainCanvas.width / 2, mainCanvas.width / 2 + 10);
+  ctx.font = "20px Major Mono Display";
+  ctx.textAlign = "center";
+  ctx.fillText("a/←: left", mainCanvas.width / 2, mainCanvas.width / 2 + 45);
+  ctx.fillText("d/→: right" , mainCanvas.width / 2, mainCanvas.width / 2 + 70);
+  ctx.fillText("s/↓: down" , mainCanvas.width / 2, mainCanvas.width / 2 + 95);
+  ctx.fillText("space: drop", mainCanvas.width / 2, mainCanvas.width / 2 + 120);
+  ctx.fillText("q: rotate ↻", mainCanvas.width / 2, mainCanvas.width / 2 + 145);
+  ctx.fillText("e: rotate ↺", mainCanvas.width / 2, mainCanvas.width / 2 + 170);
+  ctx.fillText("r: hold", mainCanvas.width / 2, mainCanvas.width / 2 + 195);
+  holderctx.font = "20px Major Mono Display";
+  holderctx.fillStyle = "black";
+  holderctx.textAlign = "center";
+  holderctx.fillText("held", holderCanvas.width / 2, holderCanvas.height / 2 - 5);
+  holderctx.fillText("block", holderCanvas.width / 2, holderCanvas.height / 2 + 20);
+  queuectx.font = "20px Major Mono Display";
+  queuectx.fillStyle = "black";
+  queuectx.textAlign = "center";
+  queuectx.fillText("queued", queueCanvas.width / 2, queueCanvas.height / 2 - 10);
+  queuectx.fillText("blocks", queueCanvas.width / 2, queueCanvas.height / 2 + 15);
+  document.getElementById("score").innerHTML = "score";
+}
+
+window.onload = startUp;
